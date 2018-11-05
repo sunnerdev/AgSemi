@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2561. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textResMT"
+            android:textColor="@color/txtColorWhite"
+            android:gravity="center_vertical|center" tools:layout_editor_absoluteY="237dp"/>
+    <ImageView
+            android:layout_width="240dp"
+            android:layout_height="55dp" app:srcCompat="@drawable/logo_full"
+            android:id="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TableLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content" android:id="@+id/tbMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+    >
+
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_dep" tools:text="แจ้งฝากเงิน"
+                android:background="@color/btncolorgreen" android:textColor="@color/txtColorWhite"
+                android:textSize="19sp" android:layout_marginTop="0dp"
+                android:text="แจ้งฝากเงิน" android:onClick="dep" android:textStyle="bold"
+        />
+
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_trans" tools:text="แจ้งโยกย้ายเงิน"
+                android:textSize="19sp" android:textColor="@color/txtColorWhite"
+                android:background="@color/design_default_color_primary" android:textStyle="bold"
+                android:layout_marginTop="5dp" android:text="แจ้งโยกย้ายเงิน" android:onClick="trans"/>
+
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_with" tools:text="แจ้งถอนเงิน"
+                android:textStyle="bold" android:textAllCaps="false" android:textColor="@color/txtColorWhite"
+                android:textSize="19sp" android:background="@color/BtnColorRed" android:layout_marginTop="5dp"
+                android:text="แจ้งถอนเงิน" android:onClick="wi"/>
+
+
+        <Button
+                android:layout_width="373dp"
+                android:layout_height="wrap_content" android:id="@+id/btn_newuser" tools:text="เปิดไอดีเกม"
+                android:textStyle="bold" android:textAllCaps="false" android:textColor="@color/txtColorWhite"
+                android:textSize="19sp" android:background="@color/colorPrimary" android:layout_marginTop="5dp"
+                android:text="เปิดไอดีเกม" android:onClick="newuser"/>
+
+    </TableLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#DDD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation"
+            app:elevation="0dp"
+            app:labelVisibilityMode="labeled"
+    >
+    </android.support.design.widget.BottomNavigationView>
+    <WebView
+            android:layout_width="0dp"
+            android:id="@+id/webview_news"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/navigation" android:layout_height="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/tbMain"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"/>
+
+
+</android.support.constraint.ConstraintLayout>

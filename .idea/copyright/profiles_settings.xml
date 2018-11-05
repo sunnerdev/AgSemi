@@ -1,0 +1,10 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="All" copyright="Semicol Studio" />
+    </module2copyright>
+    <LanguageOptions name="JAVA">
+      <option name="fileLocation" value="2" />
+    </LanguageOptions>
+  </settings>
+</component>
